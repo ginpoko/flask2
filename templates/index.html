@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <title>Flask Page</title>
-</head>
-<body>
-<h1>Hello From Flask, HTML</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block title %}Flask Page{% endblock %}
+{% block content %}
+   <h1>Hello From Flask, HTML</h1>
+   <h1>{{ "Hello From Flask, HTML"|capitalize}}</h1>
+   <h1>{{ "Hello From Flask, HTML"|title}}</h1>
+   <h1>{{ "Hello From Flask, HTML"|lower}}</h1>
+    <p>{{ user|default('variable user does not exist') }}</p>
+    <p>{{ "Jinjaについてもっと詳しく知りたい人は
+            https://jinja.palletsprojects.com/en/2.11.x/
+            まで"|urlize(target='_blank') }}</p>
+{% endblock %}
