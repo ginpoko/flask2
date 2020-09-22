@@ -2,6 +2,7 @@
 {% block title %}User List{% endblock %}
 {% block content %}
    <ul>
+   <h1>先頭の人は{{ users|first }}</h1>
     {% for user in users %}
         <li>{{ user }}</li>
     {% endfor %}
