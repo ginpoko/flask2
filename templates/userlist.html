@@ -10,6 +10,7 @@
        <li>{{ user.name }} {{ user.age }}　born at {{ user.age |born_year }}</li>
     {% endfor %}
     </ul>
+    <a href="{{ url_for('index') }}">Index Page</a>
     {% if is_login %}
         <p>ログイン済みです</p>
     {% else %}
